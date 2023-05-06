@@ -14,6 +14,15 @@ fetch('MOCK_DATA.json')
   })
   .catch(error => console.error(error));
 
+let studentsData = [];
+
+async function fetchStudentsData() {
+  const response = await fetch("MOCK_DATA.json");
+  const data = await response.json();
+  studentsData = data.students;
+  populateTable(studentsData);
+}
+
   function displayData(datas){
     htmlData=``
     for(let data of datas){
