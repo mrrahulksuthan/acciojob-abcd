@@ -27,3 +27,14 @@ fetch('MOCK_DATA.json')
       result.innerHTML += htmlData
     }
   }
+search-button.addEventListener("click", () => {
+  const searchTerm = inputtext.value.toLowerCase().trim();
+  const filteredData = datas.filter((student) => {
+    return (
+      student.first_name.toLowerCase().includes(searchTerm) ||
+      student.last_name.toLowerCase().includes(searchTerm) ||
+      student.email.toLowerCase().includes(searchTerm)
+    );
+  });
+  displayData(filteredData);
+});
