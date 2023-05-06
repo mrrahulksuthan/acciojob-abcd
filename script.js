@@ -51,3 +51,5 @@ searchButton.addEventListener("click", () => {
   });
   displayData(filteredData);
 });
+
+fetchStudentsData();
