@@ -4,15 +4,15 @@ const searchInput = document.querySelector("#inputtext");
 const searchButton = document.querySelector("#search-button");
 const sortButtons = document.querySelectorAll(".sort-button");
 
-// fetch('MOCK_DATA.json')
-//   .then(response => response.json())
-//   .then(data =>{
+fetch('MOCK_DATA.json')
+  .then(response => response.json())
+  .then(data =>{
     
-//     let datas = data;
-//     console.log(datas);
-//     displayData(datas);
-//   })
-//   .catch(error => console.error(error));
+    let datas = data;
+    console.log(datas);
+    displayData(datas);
+  })
+  .catch(error => console.error(error));
 
 let studentsData = [];
 
