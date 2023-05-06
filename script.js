@@ -4,11 +4,13 @@ const searchInput = document.querySelector("#inputtext");
 const searchButton = document.querySelector("#search-button");
 const sortButtons = document.querySelectorAll(".sort-button");
 
+let datas;
+
 fetch('MOCK_DATA.json')
   .then(response => response.json())
   .then(data =>{
     
-    let datas = data;
+    datas = data;
     console.log(datas);
     displayData(datas);
   })
