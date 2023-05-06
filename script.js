@@ -31,8 +31,8 @@ fetch('MOCK_DATA.json')
       result.innerHTML += htmlData
     }
   }
-search-button.addEventListener("click", () => {
-  const searchTerm = inputtext.value.toLowerCase().trim();
+searchButton.addEventListener("click", () => {
+  const searchTerm = searchInput.value.toLowerCase().trim();
   const filteredData = datas.filter((student) => {
     return (
       student.first_name.toLowerCase().includes(searchTerm) ||
