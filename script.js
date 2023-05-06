@@ -1,4 +1,8 @@
 
+const tableBody = document.querySelector(".table tbody");
+const searchInput = document.querySelector("#inputtext");
+const searchButton = document.querySelector("#search-button");
+const sortButtons = document.querySelectorAll(".sort-button");
 
 fetch('MOCK_DATA.json')
   .then(response => response.json())
